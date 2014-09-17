@@ -103,15 +103,15 @@ int main()
             {
                 scanf("%d %d %d",&x,&y,&c);
                 int l=0,r=INF,mid;
-                while (l<r)
+                while (l+1<r)
                 {
                     ans=0;
                     mid=(l+r)>>1;
                     query(1,1,n,x,y,mid);
-                    if(ans<c) l=mid+1;
+                    if(ans<c) l=mid;
                     else r=mid;
                 }
-                printf("%d\n",l);
+                printf("%d\n",r);
             }
         }
     }
